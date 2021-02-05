@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset='utf-8' />
-	<title>Colton Fruhling</title>
-</head>
-<body>
-<h1>Colton Fruhling</h1>
-
-Hello World
-</body>
-</html>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Colton Fruhling:Research Interests</title>
+			<!-- fonts found at fonts.google.com (needs to be before stylesheet)-->
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="styles.css"
+	</head>
+	<body>
+<!-- The container class to manage whole page  -->
+		<div class="container">
+			<div class="nav-wrapper">
+				<div class="left-side">
+					<div class="nav-wrapperLink active-nav-link">
+						<a href="index.html">Home</a>
+					</div>
+					<div class="nav-wrapperLink">
+						<a href="researchInterest.html">Research Interest</a>
+					</div>
+					<div class="nav-wrapperLink">
+						<a href="Pubs.html">Publications</a>
+					</div>
+				</div>
+				<div class="right-side">
+					<div>COLTON FRUHLING</div>
+				</div>
+			</div>
+				
+			<div class="content-wrapper">
+				<div class="six-spot-wrapper">
+					
+						<div class="general-item-wrapper">
+							<div class="profile-content-wrapper">
+								<h2> Colton Fruhling</h2>
+								<p>I am a graduate student at the University of Nebraska-Lincoln working in the Extreme Light Laboratory.  I am poised to graduate this May and looking forward to a new adventure.  I enjoy all outdoor activies and spending time with my family.<br>
+								</p>
+							</div>
+						</div>
+	
+						<div class="general-item-wrapper">
+							<img src="Images/Option1.jpg" height="90%" style="display: flex; padding-left: 10%;">
+						</div>					
+					
+						<div class="general-item-wrapper">
+							<div class="video-wrapper">
+								<div class="video-source-wrapper">
+									<video height="100%" width="100%">
+										<source src="Images/pt1Rox.mp4" type="video/mp4"</video>
+								</div>
+								<div class="video-caption-wrapper">
+									<div class="caption">
+										<p>An Illustration of coherent scattering as a group of closely pack rocks are dropped into a pond</p>
+									</div>
+								</div>
+							</div>
+						</div>
+							
+						<div class="general-item-wrapper">
+							<div class="profile-content-wrapper">
+								<p>I graduated with a BS in Physics and Astronomy from Colorado State University where I worked in a spintronics lab directed by Dr. Kristen Buchanan.
+								<br>
+								
+								The videos shown here were generated as an outreach to the public to help visualize my work with coherent nonlinear Thomson scattering (see Publications tab).
+								</p>
+							</div>
+						</div>
+								
+						<div class="general-item-wrapper">
+							<div class="profile-content-wrapper">
+							<p>Contact me:
+								<br>
+								<ul>
+									<li>email:<a href="mailto@colton.fruhling@huskers.unl.edu">colton.fruhling@huskers.unl.edu</a>
+									</li>
+									<li>LinkedIn: <a href="https://www.linkedin.com/in/colton-fruhling-05722895/">Colton Fruhling</a> </li>
+									<li>Phone: (402)-472-3207</li>
+									<li><a href="CV_cfruhling.pdf">CV</a></li>
+								</ul>
+							</p>
+							</div>
+						</div>
+								
+						<div class="general-item-wrapper">
+							<div class="video-wrapper">
+								<div class="video-source-wrapper">
+									<video height="100%" width="100%">
+										<source src="Images/1Rox.mp4" type="video/mp4"</video>
+								</div>
+								<div class="video-caption-wrapper">
+									<div class="caption">
+										<p>An illustration of incoherent scattering. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					</div>
+						</body>
+						<script>
+							const videoItems = document.querySelectorAll('.video-source-wrapper')
+							<!-- loop through items-->
+							videoItems.forEach(videoItem => { 
+								console.log(videoItem.childNodes[1].hasAttribute("controls"));
+								videoItem.addEventListener('mouseenter',() => { 
+									videoItem.childNodes[1].setAttribute("controls","controls") })
+								videoItem.addEventListener('mouseleave',() => { 
+									videoItem.childNodes[1].removeAttribute("controls") })
+									})
+							</script>
+					</html>
