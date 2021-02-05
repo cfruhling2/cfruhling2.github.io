@@ -1,0 +1,198 @@
+/* this is a comment*/
+/* fonts are at fonts.google.com */
+/* backgrounds at unsplash.com */
+/* master styles for whole page*/
+/* see  https://www.youtube.com/watch?v=5bMdjkfvONE&t=3271s */
+body {
+	margin: 0 px; /* makes images but up against the side of the page */
+	/*call the font in */
+	font-family: 'Roboto' , sans-serif;
+}
+
+/* css grid will be introduced here.  it is another tool like flex box*/
+/* style for hole container*/
+.container{
+	display: grid; /* us the grid */
+	grid-template-columns: 1fr; /* layout the grid as 1 fractional unit, 1fr =100%*/
+	
+}
+
+@-ms-viewport{
+  width: device-width;
+  
+}
+/*---------------------------------------------------*/
+/* nav bar wrapper style*/
+/* flex box fill be used in here it ignores grandchildren */
+.nav-wrapper{
+	display: flex;
+	justify-content: space-between;
+	padding: 38px; /* adds 38 pixels to top*/
+}
+
+.left-side{
+	display: flex;
+}
+/*This is how travel down a tree in css*/
+.nav-wrapper >.left-side > div{
+	margin-right: 20px; /* moves each div next to eachother */
+	font-size: 0.9em; /* This is a percent of the standard mag */ 
+	text-transform: uppercase; /* can change text here and not html*/
+}
+
+.nav-wrapperLink{
+	height: 22 px;
+	border-bottom: 1px solid transparent; 
+	transition: border-bottom 0.5s; /* this is for animations. a transition will happen on the element called, border-bottom and it will take 0.5 seconds */
+}
+	
+.nav-wrapperLink a {
+	color: #8a8a8a;
+	text-decoration: none; /* gets rid of hyperlink look */
+	transition: color 0.5s; /* another animation for the color*/
+}
+
+/* hover state */
+.nav-wrapperLink:hover {
+	border-bottom: 1px solid black;
+}
+
+/* hover state */
+.nav-wrapperLink a:hover {
+	color: 1px solid black;
+}
+
+.active-nav-link{
+	border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+	color: black !important;
+}
+/*---------------------------------------------------*/
+/* portfolio styles*/
+
+.portfolio-items-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /* gives each one of the columns (3) a full sized column*/
+	
+}
+
+.portfolio-item-wrapper {
+	position: relative; /* flexiblility of position items inside of this wrapper*/
+	
+}
+
+.portfolio-img-background {
+	height: 350px; /* sets exact image */ 
+	width: 100% ;/* adjust automatic*/ 
+	/* background-size: 100% 300px;  /* sets the images to resize */ 
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	resize: both
+}
+
+.img-text-wrapper {
+	position: absolute; /* position relative is required to have position absolute inside */
+	top: 0; /* wrapper is at the top */
+	display: flex; /* use flex box*/
+	flex-direction: column; 
+	justify-content: center; /* center left and right */
+	align-items: center; /* center top and bottom */
+	height: 100%; /* takes entire height */
+	padding-left: 30%; 
+	padding-right: 30%;
+}
+/* icon position */
+.logo-wrapper img{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20 px;
+}
+/*animation for the hover*/
+/*needs to be more specific with selector  -- done*/
+.img-text-wrapper .subtitle a{
+	transition: 1s;
+	font-weight: 600; /*bold*/
+	color: transparent;
+}
+
+.img-text-wrapper .subtitle a{
+	text-decoration:none;
+}
+.img-text-wrapper:hover  .subtitle a{
+	font-weight: 600; /*bold*/
+	color: lightseagreen;
+}
+
+/*darken images*/
+/* our own class.  it will be a function called on by javascript */
+.img-darken {
+	transition: 1s; 
+	/*adds a filter */ 
+	filter: brightness(10%); 
+	/* filter: contrast(10%); */
+}
+
+/*--------------------------------------*/
+/*Research Interest page*/
+.two-column-wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr ;
+	
+}
+
+.profile-img-wrapper img{
+	width: 90%;
+	align-items:center;
+		
+}
+
+.profile-content-wrapper {
+	padding: 30 px;
+}
+
+.profile-content-wrapper h1{
+	color:lightseagreen;
+}
+
+/*--------------Home page ----------*/
+.six-spot-wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr ;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.general-item-wrapper{
+	position: relative;
+	height: 300px;
+	width: 100%;
+}
+
+.video-caption-wrapper{
+	position: absolute; /* position relative is required to have position absolute inside */
+	bottom: 0; /* wrapper is at the top */
+	display: flex; /* use flex box*/
+	flex-direction: column; 
+	justify-content: center; /* center left and right */
+	align-items: baseline; /* center top and bottom */
+	height: 10%; /* takes entire height */
+	padding-left: 10%; 
+	padding-right: 10%;
+}
+.video-source-wrapper{
+	position: absolute; /* position relative is required to have position absolute inside */
+	top: 0; /* wrapper is at the top */
+	display: flex; /* use flex box*/
+	flex-direction: column; 
+	justify-content: center; /* center left and right */
+	align-items: center; /* center top and bottom */
+	height: 89%; /* takes entire height */
+	width: 95%
+}
+
+.caption {
+	color: #5fa0da
+}
+

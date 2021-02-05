@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+		<!-- <title>Colton Fruhling</title/> -->
+		<!-- <meta name="viewport" content="initial-scale= 0.8"/> -->
+		<title>Colton Fruhling</title>
+		<!-- fonts found at fonts.google.com (needs to be before stylesheet)-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="styles.css"</head>
+	<body>
+		<!-- The container class to manage whole page  -->
+		<div class="container">
+			<div class="nav-wrapper">
+				<div class="left-side">
+					<div class="nav-wrapperLink">
+						<a href="index.html">Home</a>
+					</div>
+					<div class="nav-wrapperLink">
+						<a href="researchInterest.html">Research Interest</a>
+					</div>
+					<div class="nav-wrapperLink active-nav-link">
+						<a href="Pubs.html">Publications</a>
+					</div>
+				</div>
+				<div class="right-side">
+					<div>COLTON FRUHLING</div>
+</div>
+</div>
+			<div class="content-wrapper">
+			
+			<div class="portfolio-items-wrapper">
+					<!--HNTS paper-->
+					<div class="portfolio-item-wrapper"/>
+					<!-- Notice the style="" which is a little snippet of css code, I am adding a image as the background but it won't show up yet-->
+						<div class="portfolio-img-background" style="background-image:url(Images/NatPhoton_cover_1.png)">
+						</div>
+						
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<!--This is the other way to deal with the images-->
+								
+								<!-- <img src="Images/Icons/LaserBlast.png"> -->
+								
+								<div class="subtitle">
+								<a href="https://www.nature.com/articles/nphoton.2017.100">
+									Highly Nonlinear Thomson Scattering</a>
+								</div>
+								
+							</div>
+						</div>
+				</div>
+			
+			<!-- Coherency paper -->
+				<div class="portfolio-item-wrapper"/>
+					<!-- Notice the style="" which is a little snippet of css code, I am adding a image as the background but it won't show up yet-->
+						<div class="portfolio-img-background" style="background-image:url(Images/Figure2_Coherent_web.png)"></div>
+						
+						<div class="img-text-wrapper">
+						
+							<div class="logo-wrapper">
+								<!--This is the other way to deal with the images-->
+								<!-- <img src="Images/Icons/waveImage.png"> -->
+								
+								<div class="subtitle">
+									<a href="https://journals.aps.org/prab/abstract/10.1103/PhysRevAccelBeams.23.072802">Measuring Attosecond Electron Bunches with Coherent Nonlinear Thomson Scattering</a>
+								</div>
+								
+							</div>
+						</div>
+				</div>
+			
+			<!--elliptical TS paper-->
+			<div class="portfolio-item-wrapper"/>
+			<!-- Notice the style="" which is a little snippet of css code, I am adding a image as the background but it won't show up yet-->
+						<div class="portfolio-img-background" style="background-image:url(Images/ElliptTS_SetupVert_vWeb.png)"></div>
+						
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								
+								<!-- <img src="Images/Icons/antenna.png"> -->
+								
+								<div class="subtitle">
+									<a href="index.html">Nonlinear Thomson Scattering from Elliptically Polarized Light</a>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+<!-- Javascript code : usually at bottom so it is not run until the page is loaded-->
+<script>
+	<!-- graps all of the wrappers -->
+     const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+	 
+	 <!-- loop through items-->
+		 portfolioItems.forEach(portfolioItem => {
+			<!-- like the hover event -->
+			portfolioItem.addEventListener('mouseenter',() => {
+				<!-- console.log(portfolioItem);  logout is sending div info to console-->
+				<!-- grabs the background image --> 
+				console.log(portfolioItem.childNodes[3].classList);
+				portfolioItem.childNodes[3].classList.add('img-darken')	
+			})
+			
+			portfolioItem.addEventListener('mouseleave',() => {
+				<!-- console.log(portfolioItem);  logout is sending div info to console-->
+				<!-- grabs the background image --> 
+				console.log(portfolioItem.childNodes[3].classList);
+				portfolioItem.childNodes[3].classList.remove('img-darken')	
+			})
+		 })
+	 
+</script>
+</html>
