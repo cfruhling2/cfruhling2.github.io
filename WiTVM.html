@@ -6,7 +6,7 @@
 		<title>Colton Fruhling:Research Interests</title>
 		<!-- fonts found at fonts.google.com (needs to be before stylesheet)-->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="styles.css"</head>
 	<body>
 		<!-- The container class to manage whole page  -->
@@ -32,25 +32,41 @@
 			</div>
 			<div class="content-wrapper">
 				<div class="two-column-wrapper">
-					<div class="profile-img-wrapper">
-						<div class="video-source-wrapper">
-							<video height="100%" width="100%">
-								<source src="Images/Change_withTIR.mp4" type="video/mp4"></video>
+					<div class="general-item-wrappe">
+						<div class="profile-content-wrapper">
+							<h1>Waves in Time-varying Media Video</h1>
+							<p>This video shows an electromagentic pulse propagating through a thin film shown in grey.  As the beam passes through the material, its refractive index is abruplty changed resulting in an angular dispersion of the optical beam.
+							</p>
 						</div>
-						<div class="video-caption-wrapper">
-							<div class="caption">
-								<p>FDTD simulation of elecgtromagnetic fields</p>
-							</div>
-							</div>
-					</div>
-					<div class="profile-content-wrapper">
-						<h1>Waves in Time-varying Media Video</h1>
-						<p>This video shows an electromagentic pulse propagating through a thin film shown in grey.  As the beam passes through the material, its refractive index is abruplty changed resulting in an angular dispersion of the optical beam.
-						</p>
 					</div>
 					
+					<div class="general-item-wrapper">
+						<div class="video-wrapper">
+							<div class="video-source-wrapper">
+								<video height="100%" width="100%">
+									<source src="Images/Change_withTIR.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div class="video-caption-wrapper">
+								<div class="caption">
+									<p>An FDTD simulation of electromagentic pulse incident on a time varying slab</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
 				</div>
 			</div>
-		</div>
-	</body>
-</html>
+		</body>
+		<script>
+			const videoItems = document.querySelectorAll('.video-source-wrapper')
+			<!-- loop through items-->
+			videoItems.forEach(videoItem => { 
+				console.log(videoItem.childNodes[1].hasAttribute("controls"));
+				videoItem.addEventListener('mouseenter',() => { 
+					videoItem.childNodes[1].setAttribute("controls","controls") })
+				videoItem.addEventListener('mouseleave',() => { 
+					videoItem.childNodes[1].removeAttribute("controls") })
+					})
+			</script>
+	</html>
