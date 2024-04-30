@@ -33,7 +33,7 @@ body {
   /* Center and scale the image nicely */
   background-position: 70% 50%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 40%;
 
   /* Needed to position the navbar */
   position: relative;
