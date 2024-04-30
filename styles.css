@@ -21,6 +21,23 @@ body {
   width: device-width;
   
 }
+
+/* background image */
+.bg-img {
+  /* The image used */
+  background-image: url("Images/websiteBack2.png");
+
+
+  /*min-height: 20px;*/
+
+  /* Center and scale the image nicely */
+  background-position: 70% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
 /*---------------------------------------------------*/
 /* nav bar wrapper style*/
 /* flex box fill be used in here it ignores grandchildren */
