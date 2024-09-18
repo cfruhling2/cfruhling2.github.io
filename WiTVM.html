@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Colton Fruhling:Research Interests</title>
+		<!-- fonts found at fonts.google.com (needs to be before stylesheet)-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="styles.css"</head>
+	<body>
+		<!-- The container class to manage whole page  -->
+		<div class="container">
+			<div class=bg-img>
+				<div class="nav-wrapper">
+					<div class="left-side">
+						<div class="nav-wrapperLink">
+							<a href="index.html">Home</a>
+						</div>
+						<div class="nav-wrapperLink">
+							<a href="researchInterest.html">Research Interest</a>
+						</div>
+						<div class="nav-wrapperLink">
+							<a href="Pubs.html">Publications</a>
+						</div>
+						<div class="nav-wrapperLink active-nav-link">
+							<a href="WiTVM.html">Waves in TVM</a>
+						</div>
+					</div>
+					<div class="right-side">
+						<div>COLTON FRUHLING</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-wrapper">
+				<div class="two-column-wrapper">
+					<div class="general-item-wrappe">
+						<div class="profile-content-wrapper">
+							<h1>Waves in Time-varying Media Video</h1>
+							<p>This video shows an electromagentic pulse propagating through a thin film shown in grey.  As the beam passes through the material, its refractive index is abruplty changed resulting in an angular dispersion of the optical beam.
+							</p>
+						</div>
+					</div>
+					
+					<div class="general-item-wrapper">
+						<div class="video-wrapper">
+							<div class="video-source-wrapper">
+								<video height="100%" width="100%">
+									<source src="Images/Change_withTIR.webm" type="video/webm">
+								</video>
+							</div>
+							<div class="video-caption-wrapper">
+								<div class="caption">
+									<p>An FDTD simulation of electromagentic pulse incident on a time varying slab</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+				</div>
+			</div>
+		</body>
+		<script>
+			const videoItems = document.querySelectorAll('.video-source-wrapper')
+			<!-- loop through items-->
+			videoItems.forEach(videoItem => { 
+				console.log(videoItem.childNodes[1].hasAttribute("controls"));
+				videoItem.addEventListener('mouseenter',() => { 
+					videoItem.childNodes[1].setAttribute("controls","controls") })
+				videoItem.addEventListener('mouseleave',() => { 
+					videoItem.childNodes[1].removeAttribute("controls") })
+					})
+			</script>
+	</html>
