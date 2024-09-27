@@ -213,3 +213,16 @@ body {
 	color: #5fa0da
 }
 
+.pdf {width: 80%;
+			  aspect-ratio: 4 / 3;
+			  hor-align: center;
+			  border : none;
+			  justify-content: center;
+			  text-align: right;
+			  }
+.myH2 {
+	text-align: center;
+	font-size: 150%;
+	margin: 15px;
+	}
+		
